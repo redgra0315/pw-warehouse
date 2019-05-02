@@ -8,3 +8,6 @@ Version: 0.0.01
 Author: XXX
 '''
 print("hello world!")
+print('你好，世界')
+print('Hello,''world', sep=', ', end='!')
+print('goodvye,world！')
