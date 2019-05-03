@@ -5,16 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Pyramid 应用",
-            "type": "python",
-            "request": "launch",
-            "args": [
-                "${workspaceFolder}\\development.ini"
-            ],
-            "pyramid": true,
-            "jinja": true
-        },
-        {
             "name": "Python: 当前文件",
             "type": "python",
             "request": "launch",
