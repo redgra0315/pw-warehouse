@@ -26,7 +26,7 @@ def Function_together(a, b):
     print("总和为：", s)
 
 
-#Function_together(2, 50)
+#Function_tov  gether(2, 50)
 import timeit
 b=timeit.default_number
 print(b)
