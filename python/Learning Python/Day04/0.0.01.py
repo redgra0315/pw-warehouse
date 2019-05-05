@@ -1,3 +1,4 @@
+
 # -*- coding:utf-8 -*-
 # 初始化课程名称 subjects、总成绩变量 sum
 subjects = ('Python 语言', 'MySQL 数据库', 'Linux 操作系统')
@@ -41,3 +42,19 @@ while j == 2 :
     print("{} 5 门课程的平均成绩是{}".format(name, avg))
 #    j += 1
 print("学生成绩输入完成！")
+=======
+""" 
+用for 循环实现1~100求加
+"""
+
+sum = 0 
+#for x in range(11):
+# for x in range(2,11,2):
+#     sum += x
+#     print(sum)
+# print(sum)
+
+for x in range(1,101):
+    if x % 2 == 0:
+        sum += x
+print(sum)
