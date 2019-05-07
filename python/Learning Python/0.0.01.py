@@ -7,7 +7,13 @@
 Version: 0.0.01
 Author: XXX
 '''
+import sys
 print("hello world!")
 print('你好，世界')
 print('Hello,''world', sep=', ', end='!')
 print('goodvye,world！')
+
+# 查看python版本
+
+print(sys.version_info)
+print(sys.version)
