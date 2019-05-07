@@ -6,9 +6,9 @@ source /etc/profile
 install_dir=/opt/gumimg/
 ping 172.16.119.60
 if [ $? -ne 0 ];
-rul=47.110.40.197
+url_ip=47.110.40.197
 else
-rul=172.16.119.60
+url_ip=172.16.119.60
 fi
 
 
