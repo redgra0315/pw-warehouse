@@ -4,12 +4,11 @@
 source /etc/profile
 
 install_dir=/opt/gumimg/
-ping 172.16.119.60
-if [ $? -ne 0 ];
+
+#公网地址
 url_ip=47.110.40.197
-else
+#内网地址
 url_ip=172.16.119.60
-fi
 
 
 ##修改内核参数
@@ -42,7 +41,6 @@ echo '
     net.ipv4.tcp_keepalive_time = 1200
     net.ipv4.ip_local_port_range = 10000 65000
     net.ipv4.tcp_syncookies = 1
-
     net.ipv4.tcp_tw_reuse = 1
     net.ipv4.tcp_tw_recycle = 1
     net.ipv4.tcp_fin_timeout = 30
@@ -57,7 +55,7 @@ setuptools_url=http://${url_ip}/download/setuptools-41.0.1.zip
 yum install  -y gcc gcc-c++ make unzip lrzsz wget   epel-release
 which pip
 if [ $? -eq 0 ];then
-    cd ${install_dir}
+    mkdir ${install_dir} &&  cd ${install_dir}
     wget ${pip_url}
     wget ${setuptools_url}
     unzip setuptools-41.0.1.zip
@@ -84,7 +82,8 @@ node(){
 #安装Java环境
 java(){
     jdk_url=http://${url_ip}/download/jdk-8u201-linux-x64.tar.gz
-    yum install java-devel
+    yum -y install java-devel
+    cd ${install_dir}
     wget ${jdk_url}
     tar xf jdk-8u201-linux-x64.tar.gz  -C /usr/local
     manven_url=http://${url_ip}/download/apache-maven-3.6.1-bin.tar.gz
@@ -95,14 +94,14 @@ java(){
 }
 PATH(){
     cp /etc/profile /etc/profile.bak
-    echo '
-    NODE_HOME=/usr/local/node-v8.11.1-linux-x64
-    M2_HOME=/usr/local/apache-maven-3.2.5
-    JAVA_HOME=/usr/local/jdk1.8.0_11
-    ANT_HOME=/usr/local/apache-ant-1.9.4
-    PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH:$ANT_HOME/bin:$M2_HOME/bin:$NODE_HOME/bin
-    CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
-    export JAVA_HOME JRE_HOME ANT_HOME PATH CLASSPATH ' >> /etc/profile
+echo '
+NODE_HOME=/usr/local/node-v8.11.1-linux-x64
+M2_HOME=/usr/local/apache-maven-3.6.1
+JAVA_HOME=/usr/local/jdk1.8.0_11
+ANT_HOME=/usr/local/apache-ant-1.9.4
+PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH:$ANT_HOME/bin:$M2_HOME/bin:$NODE_HOME/bin
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+export JAVA_HOME JRE_HOME ANT_HOME PATH CLASSPATH ' >> /etc/profile
 }
 
 
@@ -120,6 +119,6 @@ case $1 in
         PATH
     ;;
     *)
-        echo "请在脚本后面加上这四个参数中的其中的一个参数再执行，参数为(node_install|java_install)"
+        echo "默认使用内网地址下载文件，参数为(node_install|java_install)"
         exit 2
 esac
