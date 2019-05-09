@@ -6,7 +6,7 @@ source /etc/profile
 install_dir=/opt/gumimg/
 
 #公网地址
-url_ip=47.110.40.197
+#url_ip=47.110.40.197
 #内网地址
 url_ip=172.16.119.60
 
