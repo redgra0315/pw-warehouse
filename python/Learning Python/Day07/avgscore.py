@@ -12,8 +12,8 @@ def main():
     names = [None] * number
     scores = [None] * number
     for index in range(len(names)):
-        names[index] = input("请输入第%d个学生的名字" % (index + 1))
-        scores[index] = float(input("请输入第%d个学生的成绩" % (index + 1)))
+        names[index] = input("请输入第%d个学生的名字:" % (index + 1))
+        scores[index] = float(input("请输入第%d个学生的成绩:" % (index + 1)))
     total = 0
     for index in range(len(names)):
         print("%s: %.f分" % (names[index], scores[index]))
