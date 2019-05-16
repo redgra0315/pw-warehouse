@@ -98,7 +98,7 @@ PATH(){
 echo '
 NODE_HOME=/usr/local/node-v8.11.1-linux-x64
 M2_HOME=/usr/local/apache-maven-3.6.1
-JAVA_HOME=/usr/local/jdk1.8.0_11
+JAVA_HOME=/usr/local/jdk1.8.0_201
 ANT_HOME=/usr/local/apache-ant-1.9.4
 PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH:$ANT_HOME/bin:$M2_HOME/bin:$NODE_HOME/bin
 CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
