@@ -52,10 +52,11 @@ sysctl -p
 basics(){
 pip_url=http://${url_ip}/download/pip-19.1.tar.gz
 setuptools_url=http://${url_ip}/download/setuptools-41.0.1.zip
-yum install  -y gcc gcc-c++ make unzip lrzsz wget   epel-release
+yum install  -y gcc gcc-c++ make unzip lrzsz wget   epel-release  net-tools
+mkdir ${install_dir}
 which pip
 if [ $? -eq 0 ];then
-    mkdir ${install_dir} &&  cd ${install_dir}
+    cd ${install_dir}
     wget ${pip_url}
     wget ${setuptools_url}
     unzip setuptools-41.0.1.zip
@@ -68,10 +69,10 @@ if [ $? -eq 0 ];then
 else
     pip install trash-cli
     echo "alias rm='echo The rm command is disabled. Use trash-put'"   >> /etc/bashrc
+fi
 }
-jenkins(){
-    
-}
+
+
 #安装node版本
 node(){
     node_url=http://${url_ip}/download/node-v8.11.1-linux-x64.tar.gz
