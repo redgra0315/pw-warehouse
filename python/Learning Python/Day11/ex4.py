@@ -1,0 +1,17 @@
+# -*-coding:UTF-8-*-
+"引发异常"
+
+
+def f1():
+    raise AssertionError('发生异常')
+
+
+def f2():
+    f1()
+
+
+def f3():
+    f2()
+
+
+f3()
