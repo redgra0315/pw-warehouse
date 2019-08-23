@@ -8,5 +8,7 @@
         或者让用户能够定义迭代步骤和暂停条件（如C），Python的for语句迭代任何序列的项目（列表或string），按照它们出现在序列中的顺序。例如（没有双关语)
 
         enumerate函数()可以实现range()和len()函数能实现的操作
-        break()
-        continue()
+        break()     跳出循环
+        continue()  跳过本次循环，继续循环
+        
+    
