@@ -39,16 +39,16 @@
 
 
 
-def f(a,L=[]):
-    L.append(a)
-    return L
+# def f(a,L=[]):
+#     L.append(a)
+#     return L
 
-def main():
-    for i in range(10):
-        print(f(i))
+# def main():
+#     for i in range(10):
+#         print(f(i))
 
-if __name__ =='__main__':
-    main()
+# if __name__ =='__main__':
+#     main()
 
         
 
