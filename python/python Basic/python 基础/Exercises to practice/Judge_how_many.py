@@ -1,10 +1,3 @@
-'''
-@Description: In User Settings Edit
-@Author: your name
-@Date: 2019-09-05 16:16:25
-@LastEditTime: 2019-09-05 16:45:05
-@LastEditors: Please set LastEditors
-'''
 #!/usr/bin/env  python
 
 
