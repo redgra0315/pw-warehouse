@@ -8,7 +8,7 @@ age = input("age:")
 
 job = input("job:")
 
-salary = input("salaty:")
+salary = input("salary:")
 
 info2 = '''
 ----  info of %s ----
