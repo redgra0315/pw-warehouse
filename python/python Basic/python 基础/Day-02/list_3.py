@@ -27,7 +27,7 @@ data  = []
 # value_name = input("请输入你要插入值：").upper()   #转换为大写
 # value_name = input("请输入你要插入值：").title()     #首字母大写其他的小写
 while True:  
-    value_name = input("请输入你要插入值：").title().strip()
+    value_name = input("请输入你要插入值：").title().strip().rstrip()
     if value_name.isdigit():
         print("你输入的是数字，我想要字母")
     # elif value_name.startswith("name"):

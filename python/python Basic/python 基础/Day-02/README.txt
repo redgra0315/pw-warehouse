@@ -41,10 +41,12 @@
     字符串
         字符串常用方法介绍：
         请参考list_3文件进行对比
-        strip()  删除字符串开头、结尾处的空白符
-        lower()  将字符串小写
-        upper()  将字符串大写
-        count()  返回 sub 在 S 中出现的次数
+        strip()       删除字符串开头、结尾处的空白符
+        rstrip()      删除字符串末尾的空白
+        lstrip()      删除字符串开头的空白
+        lower()       将字符串小写
+        upper()       将字符串大写
+        count()       返回 sub 在 S 中出现的次数
         startswith()  判断字符串是否以什么开头
         endswith()    判断字符串是否以什么结尾
         isdigit()     判断字符串是否是数字形式
@@ -52,3 +54,7 @@
         join()        将 S 字符串作为分隔符拼接 iterable 中的每个元素(元素必须为字符串)
         replace()     将字符串中的 old 字符串替换为 new。
         title()       返回字符串的标题版本，其中单词以大写字符开头，其余字符为小写。
+        sort()        永久性排序
+        sorted(()     临时性排序
+        reverse()     倒序
+
