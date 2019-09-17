@@ -9,6 +9,7 @@
 
 import sys, math
 
+
 def hash_fraction(m, n):
     """Compute the hash of a rational number m / n.
 
@@ -33,6 +34,7 @@ def hash_fraction(m, n):
         hash_value = -2
     return hash_value
 
+
 def hash_float(x):
     """Compute the hash of a float x."""
 
@@ -43,12 +45,13 @@ def hash_float(x):
     else:
         return hash_fraction(*x.as_integer_ratio())
 
+
 def hash_complex(z):
     """Compute the hash of a complex number z."""
 
     hash_value = hash_float(z.real) + sys.hash_info.imag * hash_float(z.imag)
     # do a signed reduction modulo 2**sys.hash_info.width
-    M = 2**(sys.hash_info.width - 1)
+    M = 2 ** (sys.hash_info.width - 1)
     hash_value = (hash_value & (M - 1)) - (hash_value & M)
     if hash_value == -1:
         hash_value = -2
