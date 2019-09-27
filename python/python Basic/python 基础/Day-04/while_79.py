@@ -43,6 +43,7 @@ def Destination():
     print("---If you could visit one placein the world, where would you go?---")
     information = """
         A) 根据国家来查找景点
+        S) 根据景点来查找国家
         Q）退出
     """
     while True:
@@ -63,12 +64,18 @@ def Destination():
                   "\t 城市分别是：%s" % name_value)
             City_Numbers = int(input("Tips: select by number (from 0 to 10): "))
             print("Congratulations, your choice is {0},{1}".format(Selected_countries, name_value[City_Numbers]))
+        elif value == "s":
+            name = list(db.values())
+            lst_set = name[0] + name[1]
+            print("以下景点可供你做选择:", lst_set)
+            unist = input("请输入你要选择的景点:")
+            for key, value in db.items():
+                if unist in value:
+                    print(f'城市:{unist} 国家:{key}')
         else:
             return "结束"
             sys.exit(0)
 
+
 info = Destination()
 print(info)
-
-
-
