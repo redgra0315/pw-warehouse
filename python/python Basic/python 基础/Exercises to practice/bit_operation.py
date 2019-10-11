@@ -13,7 +13,11 @@
 
 
 #奇数位运算
+import random
+# num = random.randint(1,18)
+for i in range(10):
+    print(random.randint(1,18))
 
-for i in range(11):
-    if i % 2 !=0:
-        print(i)
+# import string
+
+# str = string.
