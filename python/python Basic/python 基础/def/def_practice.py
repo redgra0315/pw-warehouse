@@ -6,6 +6,7 @@ __author__ = "mi"
 __mtime__ = "2019/10/11"      
 """
 
+
 # def make_shirt(size='大号',style='Python'):
 #     # print("这件衣服的样式为 {0},大小为: {1}".format(style,size))
 #     print("I LOVE {0} is {1} T 恤".format(style,size))
@@ -41,29 +42,27 @@ __mtime__ = "2019/10/11"      
 
 
 # 城市名
-# def city_country(city, state="China"):
-#     return city, state
-#
-#
-# # print(len(city_list))
-# def build_city(city_list1):
-#     list = []
-#     for i in range(0, len(city_list1)):
-#         city_name = city_list1[i]
-#         cist = city_country(city_name)
-#         list.append(cist)
-#     return list
-#
-#
-# def main():
-#     city_list = ['Zhenjiang', 'Jiangxi', 'Guangzhou']
-#     hah = build_city(city_list)
-#     print(hah, end=" \t")
-#
-#
-# if __name__ == '__main__':
-#     main()
+def city_country(city, state="China"):
+    return city, state
 
+
+def build_city(city_list1):
+    list = []
+    for i in range(0, len(city_list1)):
+        city_name = city_list1[i]
+        cist = city_country(city_name)
+        list.append(cist)
+    return list
+
+
+def main():
+    city_list = ['Zhenjiang', 'Jiangxi', 'Guangzhou']
+    hah = build_city(city_list)
+    print(hah, end=" \t")
+
+
+if __name__ == '__main__':
+    main()
 
 # 专辑练习，根据输入专辑的数量来决定循环的次数
 
@@ -74,6 +73,7 @@ album_name = {}
 def make_album(name, album, album_count):
     album_name[name] = {"专辑": [album]}, {"歌曲数量": album_count}
     return album_name
+
 
 while True:
     singer = input("singer is name:")
@@ -93,8 +93,3 @@ while True:
     exit_status = input("Whether to continue operation(y/n)")
     if exit_status != "y":
         break
-# album_name = {'刘德华': ({'专辑': ['练习']}, {'歌曲数量': 2})}
-# db_list= album_name[singer][0]['专辑']
-# db_list.append("忘情水")
-# print(album_name)
-
