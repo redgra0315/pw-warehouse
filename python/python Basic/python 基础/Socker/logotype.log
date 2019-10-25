@@ -1,0 +1,1 @@
+ 2019-10-24 13:38:38   [INFO]  MainThread    <module>  test <socket.socket fd=572, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 9999)>
