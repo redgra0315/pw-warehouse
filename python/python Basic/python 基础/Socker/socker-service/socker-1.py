@@ -12,11 +12,11 @@ import threading
 
 class MyHandler(socketserver.BaseRequestHandler):
     def setup(self):
-        super().setup()
+        # super().setup()
         self.event = threading.Event()
 
     def handle(self):
-        super().handle()
+        # super().handle()
         print(self.server, self.client_address, self.request)
         while not self.event.is_set():
             data = self.request.recv(1024)

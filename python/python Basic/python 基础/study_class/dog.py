@@ -37,7 +37,10 @@ class Person:
         print('class = {0.__name__} ({0})'.format(cls))
         cls.HEIGHT = 170
 
-
+    @staticmethod
+    def static_methd():
+        print(Person.HEIGHT)
 
 Person.class_method()
+Person.static_methd()
 print(Person.__dict__)
